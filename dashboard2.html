@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui-calendar/0.0.8/calendar.min.css" integrity="sha512-9ekcmn0Igxtw/da3eJi2aYXpGvZ4EKwM2CnIYmVj6zcSVrv4uB7FtF/vHz7wrbajx2DQy7JrtxJ/Myr2DB3erA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>TrackMe</title>
+</head>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__toggle" id="header-toggle">
+                <i class="ri-menu-line"></i>
+                
+            </div>
+            <div class="me"></div>
+
+            <div class="profile">
+                <p>Welcome!</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVILtUxgyHIGV5Up6oS8geYzHdtR45ghDZ1g&s" alt="profile">
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <!--=============== SIDEBAR ===============-->
+    <div class="sidebar" id="sidebar">
+        <nav class="sidebar__container">
+            <div class="sidebar__logo">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
+                    fill="#FFFFFF">
+                    <path
+                        d="M249.9-120q-53.9 0-91.9-38.1-38-38.1-38-92t38.07-91.9q38.07-38 91.93-38h70v-200h-70q-53.86 0-91.93-38.1-38.07-38.1-38.07-92t38.1-91.9q38.1-38 92-38t91.9 38.07q38 38.07 38 91.93v70h200v-70q0-53.86 38.1-91.93 38.1-38.07 92-38.07t91.9 38.1q38 38.1 38 92T801.93-618q-38.07 38-91.93 38h-70v200h70q53.86 0 91.93 38.1 38.07 38.1 38.07 92T801.9-158q-38.1 38-92 38T618-158.07q-38-38.07-38-91.93v-70H380v70q0 53.86-38.1 91.93-38.1 38.07-92 38.07Zm-.02-60q29.12 0 49.62-20.42Q320-220.83 320-250v-70h-70q-29.17 0-49.58 20.38Q180-279.24 180-250.12t20.38 49.62q20.38 20.5 49.5 20.5Zm460 0q29.12 0 49.62-20.38 20.5-20.38 20.5-49.5t-20.42-49.62Q739.17-320 710-320h-70v70q0 29.17 20.38 49.58Q680.76-180 709.88-180ZM380-380h200v-200H380v200ZM250-640h70v-70q0-29.17-20.38-49.58Q279.24-780 250.12-780t-49.62 20.38q-20.5 20.38-20.5 49.5t20.42 49.62Q220.83-640 250-640Zm390 0h70q29.17 0 49.58-20.38Q780-680.76 780-709.88t-20.38-49.62q-20.38-20.5-49.5-20.5t-49.62 20.42Q640-739.17 640-710v70Z" />
+                </svg>
+                <img src="./assets/TrackMe.svg" alt="" class="sidebar__logo-text">
+            </div>
+
+            <div class="sidebar__content">
+                <div class="sidebar__list">
+                    <a href="#Dashboard" class="sidebar__link active-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#e8eaed">
+                            <path
+                                d="M520-600v-240h320v240H520ZM120-440v-400h320v400H120Zm400 320v-400h320v400H520Zm-400 0v-240h320v240H120Zm80-400h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z" />
+                        </svg>
+                        <span class="sidebar__link-name">Dashboard</span>
+                        <span class="sidebar__link-floating">Dashboard</span>
+                    </a>
+
+                    <a href="#to-do" class="sidebar__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#FFFFFF">
+                            <path
+                                d="M80-160v-160h160v160H80Zm240 0v-160h560v160H320ZM80-400v-160h160v160H80Zm240 0v-160h560v160H320ZM80-640v-160h160v160H80Zm240 0v-160h560v160H320Z" />
+                        </svg>
+                        <span class="sidebar__link-name">TO DO</span>
+                        <span class="sidebar__link-floating">TO DO</span>
+                    </a>
+
+                    <a href="#teams" class="sidebar__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#e8eaed">
+                            <path
+                                d="M0-240v-63q0-43 44-70t116-27q13 0 25 .5t23 2.5q-14 21-21 44t-7 48v65H0Zm240 0v-65q0-32 17.5-58.5T307-410q32-20 76.5-30t96.5-10q53 0 97.5 10t76.5 30q32 20 49 46.5t17 58.5v65H240Zm540 0v-65q0-26-6.5-49T754-397q11-2 22.5-2.5t23.5-.5q72 0 116 26.5t44 70.5v63H780Zm-455-80h311q-10-20-55.5-35T480-370q-55 0-100.5 15T325-320ZM160-440q-33 0-56.5-23.5T80-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T160-440Zm640 0q-33 0-56.5-23.5T720-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T800-440Zm-320-40q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-600q0 50-34.5 85T480-480Zm0-80q17 0 28.5-11.5T520-600q0-17-11.5-28.5T480-640q-17 0-28.5 11.5T440-600q0 17 11.5 28.5T480-560Zm1 240Zm-1-280Z" />
+                        </svg>
+                        <span class="sidebar__link-name">Teams</span>
+                        <span class="sidebar__link-floating">Teams</span>
+                    </a>
+                </div>
+
+                <a href="#Projects" class="sidebar__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="m424-318 282-282-56-56-226 226-114-114-56 56 170 170ZM120-120v-720h248q13-36 43.5-58t68.5-22q38 0 68.5 22t43.5 58h248v720H120Zm80-80h560v-560H200v560Zm280-590q13 0 21.5-8.5T510-820q0-13-8.5-21.5T480-850q-13 0-21.5 8.5T450-820q0 13 8.5 21.5T480-790ZM200-200v-560 560Z" />
+                    </svg>
+                    <span class="sidebar__link-name">Projects</span>
+                    <span class="sidebar__link-floating">Projects</span>
+                </a>
+
+                <a href="#Trash" class="sidebar__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"/></svg>                    <span class="sidebar__link-name">Calendar</span>
+                    <span class="sidebar__link-floating">Calendar</span>
+                </a>
+
+
+            </div>
+
+            <h3 class="sidebar__title">
+                <span>General</span>
+            </h3>
+
+            <div class="sidebar__list">
+                <a href="login.html" class="sidebar__link" onclick="redirectToLogin(event)">
+                    <i class="ri-logout-box-r-line"></i>
+                    <span class="sidebar__link-name">Logout</span>
+                    <span class="sidebar__link-floating">Logout</span>
+                </a>
+            </div>
+    </div>
+
+    </nav>
+    </div>
+
+    <!--=============== MAIN ===============-->
+    <main class="main container" id="main">
+        <section id="teams">
+            
+            <div class="content">
+                <div class="team_header">
+                    <h1>MY TEAM</h1>
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Find member">
+                    </div>
+                </div>
+                <div class="over">
+                    <div class="outer-box">
+                        <div class="inner-box">
+                            <div class="title">
+                                <div class="title_left">
+                                    <h3>John Doe</h3>
+                                    <h4>Member 1</h4>
+                                </div>
+                               
+                            </div>
+                            <div class="in_content">
+                                <div class="conright"><br>
+                                    <h3>ID : 001</h3>
+                                </div>
+                                <br>
+                                <h3>Progress</h3>
+                                <div class="progress-container">
+                                    <div class="progress-bar1" id="progressBar1"></div>
+                                </div>
+                                <div class="progress-text1" id="progressText1">0%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="outer-box">
+                        <div class="inner-box">
+                            <div class="title">
+                                <div class="title_left">
+                                    <h3>Jane Smith</h3>
+                                    <h4>Member 2</h4>
+                                </div>
+                               
+                            </div>
+                            <div class="in_content">
+                                <div class="conright"><br>
+                                    
+                                    <h3>ID : 002</h3>
+                                    <br>
+                                    <h3>Progress</h3>
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-bar2" id="progressBar2"></div>
+                                </div>
+                                <div class="progress-text2" id="progressText2">0%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="outer-box">
+                        <div class="inner-box">
+                            <div class="title">
+                                <div class="title_left">
+                                    <h3>Emily Davis</h3>
+                                    <h4>Member 3</h4>
+                                </div>
+                               
+                            </div>
+                            <div class="in_content">
+                                <div class="conright"><br>
+                                    
+                                    <h3>ID : 003</h3>
+                                    <br>
+                                    <h3>Progress</h3>
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-bar3" id="progressBar3"></div>
+                                </div>
+                                <div class="progress-text3" id="progressText3">0%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="outer-box">
+                        <div class="inner-box">
+                            <div class="title">
+                                <div class="title_left">
+                                    <h3>Michael Brown</h3>
+                                    <h4>Member 4</h4>
+                                </div>
+                               
+                            </div>
+                            <div class="in_content">
+                                <div class="conright"><br>
+                                   
+                                    <h3>ID : 004</h3>
+                                    <br>
+                                    <h3>Progress</h3>
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-bar4" id="progressBar4"></div>
+                                </div>
+                                <div class="progress-text4" id="progressText4">0%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <H3>List Of Employees</H3>
+                <br>
+                <div class="table">
+                    <table id="employeeTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Employee</th>
+                                <th>Email-ID</th>
+                                <th>Start Date</th>
+                                <th>Job Title</th>
+                                <th>Project</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>001</td>
+                                <td>John Doe</td>
+                                <td>john.doe@example.com</td>
+                                <td>2021-01-15</td>
+                                <td>Software Engineer</td>
+                                <td>Website Redesign</td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>Jane Smith</td>
+                                <td>jane.smith@example.com</td>
+                                <td>2020-09-01</td>
+                                <td>Data Analyst</td>
+                                <td>Data Visualization</td>
+                            </tr>
+                            <tr>
+                                <td>003</td>
+                                <td>Emily Davis</td>
+                                <td>emily.davis@example.com</td>
+                                <td>2022-05-23</td>
+                                <td>Project Manager</td>
+                                <td>Mobile App Launch</td>
+                            </tr>
+                            <tr>
+                                <td>004</td>
+                                <td>Michael Brown</td>
+                                <td>michael.brown@example.com</td>
+                                <td>2019-03-12</td>
+                                <td>DevOps Engineer</td>
+                                <td>Cloud Migration</td>
+                            </tr>
+                            <tr>
+                                <td>005</td>
+                                <td>Sarah Wilson</td>
+                                <td>sarah.wilson@example.com</td>
+                                <td>2021-11-09</td>
+                                <td>UI/UX Designer</td>
+                                <td>Product Dashboard</td>
+                            </tr>
+                            <tr>
+                                <td>006</td>
+                                <td>David Lee</td>
+                                <td>david.lee@example.com</td>
+                                <td>2020-07-18</td>
+                                <td>QA Engineer</td>
+                                <td>Automation Testing</td>
+                            </tr>
+                            <tr>
+                                <td>007</td>
+                                <td>Alice Johnson</td>
+                                <td>alice.johnson@example.com</td>
+                                <td>2022-02-07</td>
+                                <td>Marketing Specialist</td>
+                                <td>Social Media Campaign</td>
+                            </tr>
+                            <tr>
+                                <td>008</td>
+                                <td>Chris Evans</td>
+                                <td>chris.evans@example.com</td>
+                                <td>2018-12-30</td>
+                                <td>Full Stack Developer</td>
+                                <td>E-commerce Platform</td>
+                            </tr>
+                            <tr>
+                                <td>009</td>
+                                <td>Emma Green</td>
+                                <td>emma.green@example.com</td>
+                                <td>2019-06-24</td>
+                                <td>HR Manager</td>
+                                <td>Employee Engagement</td>
+                            </tr>
+                            <tr>
+                                <td>010</td>
+                                <td>Daniel White</td>
+                                <td>daniel.white@example.com</td>
+                                <td>2021-04-16</td>
+                                <td>Business Analyst</td>
+                                <td>Market Research</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Pagination Controls -->
+                <div class="pagination">
+                    <button id="prevBtn" onclick="prevPage()" disabled>Previous</button>
+                    <button id="nextBtn" onclick="nextPage()">Next</button>
+                </div>
+
+            </div>
+        </section>
+        <section id="to-do">
+            
+            <h1>HOLA AMIGO!</h1>
+            <p id="current-date"></p> <!-- Placeholder for the automated date -->
+
+            <!-- Button to open the modal -->
+            <button class="add-task-btn" id="openModalBtn"> + Add Task</button>
+
+            <!-- Modal Structure -->
+            <div id="addTaskModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn" id="closeModalBtn">&times;</span>
+                    <h2>Add Task</h2>
+                    <div class="form-group">
+                        <label for="taskName">Task Name:</label>
+                        <input type="text" id="taskName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Start Date:</label>
+                        <input type="date" id="startDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dueDate">Due Date:</label>
+                        <input type="date" id="dueDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category:</label>
+                        <select id="category" required>
+                            <option value="today-list">Today</option>
+                            <option value="work-list">Work In Progress</option>
+                            <option value="upcoming-list">Upcoming</option>
+                        </select>
+                    </div>
+                    <button class="submit-task" id="addTaskBtn">Add Task</button>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="section" id="today">
+                    <h2>Today</h2>
+                    <ul class="task-list" id="today-list"></ul>
+                </div>
+                <div class="section" id="work-in-progress">
+                    <h2>Work In Progress</h2>
+                    <ul class="task-list" id="work-list"></ul>
+                </div>
+                <div class="section" id="upcoming">
+                    <h2>Upcoming</h2>
+                    <ul class="task-list" id="upcoming-list"></ul>
+                </div>
+                <div class="section" id="missed">
+                    <h2>Missed</h2>
+                    <ul class="task-list" id="missed-list"></ul>
+                </div>
+                <div class="section" id="completed">
+                    <h2>Completed</h2>
+                    <ul class="task-list" id="completed-list"></ul>
+                </div>
+            </div>
+
+
+        </section>
+        <section id="Trash">
+            
+            <div id="calendar-container">
+                <h1>Project Calendar</h1>
+                <div id="month-navigation">
+                    <button id="prev-month">&lt;</button>
+                    <h2 id="current-month-year"></h2>
+                    <button id="next-month">&gt;</button>
+                </div>
+                <div id="calendar"></div>
+            </div>
+        
+        </section>
+        <section id="Projects">
+            
+            <div class="toolbar">
+       
+                <div class="middle-section">
+                    <input type="text" placeholder="Search Project" class="search-bar">
+                </div>
+        
+                <div class="right-section">
+                    
+                    <button class="date-picker">May, 2022 </button>
+                </div>
+            </div>
+        
+            <div class="table-container">
+                <h1>Project Management Table</h1>
+                <table id="projectTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Client / Company</th>
+                            <th>Status</th>
+                            <th>Deadline</th>
+                            <th>Budget</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Sample rows -->
+                        <tr>
+                            <td>Skyline Heights Residences</td>
+                            <td>Sindy Sen</td>
+                            <td>
+                                <select>
+                                    <option>Completed</option>
+                                    <option>Pending</option>
+                                    <option>On Hold</option>
+                                    <option>In Progress</option>
+                                </select>
+                            </td>
+                            <td>Yesterday</td>
+                            <td>$6.7M</td>
+                        </tr>
+                        <tr>
+                            <td>Riverside Retreat</td>
+                            <td>Praveen N</td>
+                            <td>
+                                <select>
+                                    <option>Completed</option>
+                                    <option>Pending</option>
+                                    <option>On Hold</option>
+                                    <option>In Progress</option>
+                                </select>
+                            </td>
+                            <td>Today</td>
+                            <td>$50K</td>
+                        </tr>
+                        <!-- Add empty row with buttons for each column -->
+                        <tr>
+                            <td><button class="add-btn" data-column="name">Add</button></td>
+                            <td><button class="add-btn" data-column="client">Add</button></td>
+                            <td><button class="add-btn" data-column="status">Add</button></td>
+                            <td><button class="add-btn" data-column="deadline">Add</button></td>
+                            <td><button class="add-btn" data-column="budget">Add</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+        </section>
+        <section id="Dashboard">
+            
+            <div class="content">
+                <div class="head">
+                    <h1>DASHBOARD</h1>
+                </div>
+                <!-- Job Overview Section -->
+                <div class="overview">
+                    <div class="job-overview">
+                        <h3>Job Overview</h3>
+                        <p>Total Jobs: 180</p>
+                        <p>Active Jobs: 100</p>
+                        <p>Finish Jobs: 30</p>
+                    </div>
+                    <div class="attendance-rate">
+                        <h3>Attendance Rate</h3>
+                        <p>90% <span class="percentage">(20% since last month)</span></p>
+                        <div class="progress-bar"></div>
+                    </div>
+                    <div class="total-employees">
+                        <h3>Total Employees</h3>
+                        <p>150 Full-time</p>
+                        <p>50 Freelance</p>
+                    </div>
+                </div>
+    
+                <!-- Charts Section -->
+                <div class="charts">
+                    <div class="income-statistics">
+                        <h2>Income Statistics</h2><br><br>
+                        <!-- Chart goes here -->
+                        <canvas id="incomeChart"></canvas>
+                    </div>
+                    <div class="employee-performance">
+                        <h2>Team Performance</h2><br><br>
+                        <canvas id="performanceChart"></canvas>
+                    </div>
+                </div>
+                <div class="projectchart">
+                    <div class="chart1">
+                        <h2>Project Insights</h2><br><br>
+                    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                    </div>
+                    <div class="incoming-projects">
+                        <h2>Incoming Projects</h2>
+                        <div class="item">
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#FFFFFF"><path d="m357-513 90-90-75-75-48 48-42-42 48-48-75-74-90 90 192 191Zm346 348 90-91-75-75-48 48-42-42 48-48-74-74-90 90 191 192Zm8-615 70 70-70-70ZM276-120H120v-156l194-194L80-704l174-176 236 235 178-178q9-9 20-13t22-4q11 0 22 4t20 13l71 71q9 9 13 20t4 22q0 11-4 22t-13 20L645-490l235 235L705-81 471-315 276-120Zm-96-60h70l393-394-70-70-393 394v70Zm428-429-35-35 70 70-35-35Z"/></svg>
+                                    </span>
+                            </div>
+                            <div class="right">
+                               <div class="info1">
+                                <h3>UI-UX Design</h3>
+                                <small class="text-muted">End Date 31/8/2024</small>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#FFFFFF"><path d="M480-80q-84 0-157-31.5T196-197q-54-54-85-127.5T80-482q0-84 31-156.5T196-765q54-54 127-84.5T480-880q84 0 157 30.5T764-765q54 54 85 126.5T880-482q0 84-31 157.5T764-197q-54 54-127 85.5T480-80Zm0-58q35-36 58.5-82.5T577-331H384q14 60 37.5 108t58.5 85Zm-85-12q-25-38-43-82t-30-99H172q38 71 88 111.5T395-150Zm171-1q72-23 129.5-69T788-331H639q-13 54-30.5 98T566-151ZM152-391h159q-3-27-3.5-48.5T307-482q0-25 1-44.5t4-43.5H152q-7 24-9.5 43t-2.5 45q0 26 2.5 46.5T152-391Zm221 0h215q4-31 5-50.5t1-40.5q0-20-1-38.5t-5-49.5H373q-4 31-5 49.5t-1 38.5q0 21 1 40.5t5 50.5Zm275 0h160q7-24 9.5-44.5T820-482q0-26-2.5-45t-9.5-43H649q3 35 4 53.5t1 34.5q0 22-1.5 41.5T648-391Zm-10-239h150q-33-69-90.5-115T565-810q25 37 42.5 80T638-630Zm-254 0h194q-11-53-37-102.5T480-820q-32 27-54 71t-42 119Zm-212 0h151q11-54 28-96.5t43-82.5q-75 19-131 64t-91 115Z"/></svg>
+                                    </span>
+                            </div>
+                            <div class="right">
+                               <div class="info1">
+                                <h3>DNS Server</h3>
+                                <small class="text-muted">End Date 31/8/2024</small>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#FFFFFF"><path d="M40-360v-240h48v85h115v-85h48v240h-48v-107H88v107H40Zm313 0v-192h-80v-48h208v48h-80v192h-48Zm230 0v-192h-80v-48h208v48h-80v192h-48Zm150 0v-240h138q23 0 36 13t13 36v58q0 23-13 35.5T871-445h-90v85h-48Zm48-133h91v-59h-91v59Z"/></svg>
+                                    </span>
+                            </div>
+                            <div class="right">
+                               <div class="info1">
+                                <h3>Wikipedia Redesign</h3>
+                                <small class="text-muted">End Date 31/8/2024</small>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+    </main>
+    <!--=============== MAIN JS ===============-->
+    <script>
+        window.onload = function () {
+            const progressBar1 = document.getElementById('progressBar1');
+            const progressText1 = document.getElementById('progressText1');
+            const progressBar2 = document.getElementById('progressBar2');
+            const progressText2 = document.getElementById('progressText2');
+            const progressBar3 = document.getElementById('progressBar3');
+            const progressText3 = document.getElementById('progressText3');
+            const progressBar4 = document.getElementById('progressBar4');
+            const progressText4 = document.getElementById('progressText4');
+            let width = 0;
+
+            const interval2 = setInterval(() => {
+                if (width >= 81) {
+                    clearInterval(interval2);
+                } else {
+                    width++;
+                    progressBar1.style.width = width + '%';
+                    progressText1.innerHTML = width + '%';
+                }
+            }, 20);
+            const interval = setInterval(() => {
+                if (width >= 61) {
+                    clearInterval(interval);
+                } else {
+                    width++;
+                    progressBar2.style.width = width + '%';
+                    progressText2.innerHTML = width + '%';
+                }
+            }, 20);
+            const interval3 = setInterval(() => {
+                if (width >= 51) {
+                    clearInterval(interval3);
+                } else {
+                    width++;
+                    progressBar3.style.width = width + '%';
+                    progressText3.innerHTML = width + '%';
+                }
+            }, 20);
+            const interval4 = setInterval(() => {
+                if (width >= 90) {
+                    clearInterval(interval4);
+                } else {
+                    width++;
+                    progressBar4.style.width = width + '%';
+                    progressText4.innerHTML = width + '%';
+                }
+            }, 20);   // Adjust the speed of progress
+        }
+        const rowsPerPage = 5; // Number of rows to display per page
+        let currentPage = 1;
+        const table = document.getElementById('employeeTable');
+        const rows = table.querySelectorAll('tbody tr');
+        const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+        // Function to display rows for the current page
+        function displayRows() {
+            // Calculate start and end index
+            const startIndex = (currentPage - 1) * rowsPerPage;
+            const endIndex = startIndex + rowsPerPage;
+
+            // Hide all rows initially
+            rows.forEach((row, index) => {
+                row.style.display = 'none';
+                if (index >= startIndex && index < endIndex) {
+                    row.style.display = 'table-row';
+                }
+            });
+
+            // Disable/Enable pagination buttons based on the current page
+            document.getElementById('prevBtn').disabled = currentPage === 1;
+            document.getElementById('nextBtn').disabled = currentPage === totalPages;
+        }
+
+        // Function to go to the next page
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                displayRows();
+            }
+        }
+
+        // Function to go to the previous page
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                displayRows();
+            }
+        }
+
+        // Initial display of the first page
+        displayRows();
+        // Array of days and months for readable format
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        // Get current date
+        const today = new Date();
+        const dayName = days[today.getDay()];
+        const day = today.getDate();
+        const month = months[today.getMonth()];
+        const year = today.getFullYear();
+
+        // Format the date as in the image: It's [Day], [Date] [Month] [Year]
+        const formattedDate = `It's ${dayName}, ${day} ${month} ${year}`;
+
+        // Set the content of the #current-date element
+        document.getElementById("current-date").textContent = formattedDate;
+
+        document.getElementById('addTaskBtn').onclick = function () {
+            const taskName = document.getElementById('taskName').value;
+            const startDate = document.getElementById('startDate').value;
+            const dueDate = document.getElementById('dueDate').value;
+            const category = document.getElementById('category').value;
+            const createdDate = new Date().toISOString().split('T')[0];  // Current date
+
+            if (taskName && startDate && dueDate && category) {
+                const taskList = document.getElementById(category);
+                const newTask = createTaskElement(taskName, createdDate, startDate, dueDate);
+                taskList.appendChild(newTask);
+
+                // Reset form
+                document.getElementById('taskName').value = '';
+                document.getElementById('startDate').value = '';
+                document.getElementById('dueDate').value = '';
+                document.getElementById('category').value = 'today-list';
+
+                // Close the modal after adding the task
+                modal.style.display = 'none';
+            } else {
+                alert('Please fill out all fields');
+            }
+
+            checkMissedTasks();  // Check if tasks are missed when adding new ones
+        }
+
+
+        function createTaskElement(taskText, createdDate, startDate, dueDate) {
+            const li = document.createElement('li');
+            li.textContent = taskText;
+
+            // Add radio button for marking completed
+            const radio = document.createElement('input');
+            radio.type = 'radio';
+            radio.addEventListener('change', () => markAsCompleted(li));
+
+            li.prepend(radio);
+
+            // Add date information
+            const dateInfo = document.createElement('div');
+            dateInfo.classList.add('task-dates');
+            dateInfo.innerHTML = `Created: ${createdDate}<br>Start: ${startDate}<br>Due: ${dueDate}`;
+
+            li.appendChild(dateInfo);
+            li.setAttribute('draggable', 'true');
+            li.setAttribute('data-due-date', dueDate);
+
+            // Event listeners for drag and drop
+            li.addEventListener('dragstart', () => {
+                li.classList.add('dragging');
+                draggedTask = li;
+            });
+
+            li.addEventListener('dragend', () => {
+                li.classList.remove('dragging');
+                draggedTask = null;
+            });
+
+            return li;
+        }
+
+        // Mark task as completed
+        function markAsCompleted(task) {
+            task.classList.add('completed');
+            task.querySelector('input[type="radio"]').disabled = true;  // Disable radio button
+            document.getElementById('completed-list').appendChild(task);
+        }
+
+        // Enable drag and drop for all lists
+        document.querySelectorAll('.task-list').forEach(list => {
+            list.addEventListener('dragover', (e) => {
+                e.preventDefault();
+            });
+
+            list.addEventListener('drop', () => {
+                if (draggedTask) {
+                    list.appendChild(draggedTask);
+                }
+            });
+        });
+
+        // Function to check for missed tasks
+        function checkMissedTasks() {
+            const currentDate = new Date().toISOString().split('T')[0];  // Get today's date
+
+            document.querySelectorAll('.task-list li').forEach(task => {
+                const dueDate = task.getAttribute('data-due-date');
+
+                if (dueDate < currentDate && !task.classList.contains('completed')) {
+                    task.classList.add('missed');
+                    document.getElementById('missed-list').appendChild(task);
+                }
+            });
+        }
+
+        // Run this function periodically to check missed tasks
+        setInterval(checkMissedTasks, 60000);  // Check every minute
+
+        let draggedTask = null;
+
+        // Open and Close Modal Logic
+        const modal = document.getElementById('addTaskModal');
+        const openModalBtn = document.getElementById('openModalBtn');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        openModalBtn.onclick = function () {
+            modal.style.display = 'flex'; // Show the modal
+        }
+
+        closeModalBtn.onclick = function () {
+            modal.style.display = 'none'; // Hide the modal
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = 'none'; // Close modal when clicking outside
+            }
+        }
+
+        // Function to add a task
+        document.getElementById('addTaskBtn').onclick = function () {
+            const taskName = document.getElementById('taskName').value;
+            const startDate = document.getElementById('startDate').value;
+            const dueDate = document.getElementById('dueDate').value;
+            const category = document.getElementById('category').value;
+            const createdDate = new Date().toISOString().split('T')[0];  // Current date
+
+            if (taskName && startDate && dueDate && category) {
+                const taskList = document.getElementById(category);
+                const newTask = createTaskElement(taskName, createdDate, startDate, dueDate);
+                taskList.appendChild(newTask);
+
+                // Reset form
+                document.getElementById('taskName').value = '';
+                document.getElementById('startDate').value = '';
+                document.getElementById('dueDate').value = '';
+                document.getElementById('category').value = 'today-list';
+
+                // Close the modal after adding the task
+                modal.style.display = 'none';
+            } else {
+                alert('Please fill out all fields');
+            }
+
+            checkMissedTasks();  // Check if tasks are missed when adding new ones
+        }
+
+        function createTaskElement(taskText, createdDate, startDate, dueDate) {
+            const li = document.createElement('li');
+            li.textContent = taskText;
+
+            // Add radio button for marking completed
+            const radio = document.createElement('input');
+            radio.type = 'radio';
+            radio.addEventListener('change', () => markAsCompleted(li));
+
+            li.prepend(radio);
+
+            // Add date information
+            const dateInfo = document.createElement('div');
+            dateInfo.classList.add('task-dates');
+            dateInfo.innerHTML = `Created: ${createdDate}<br>Start: ${startDate}<br>Due: ${dueDate}`;
+
+            li.appendChild(dateInfo);
+            li.setAttribute('draggable', 'true');
+            li.setAttribute('data-due-date', dueDate);
+            // Event listeners for drag and drop
+            li.addEventListener('dragstart', () => {
+                li.classList.add('dragging');
+                draggedTask = li;
+            });
+
+            li.addEventListener('dragend', () => {
+                li.classList.remove('dragging');
+                draggedTask = null;
+            });
+
+            return li;
+        }
+
+        // Mark task as completed
+        function markAsCompleted(task) {
+            task.classList.add('completed');
+            task.querySelector('input[type="radio"]').disabled = true;  // Disable radio button
+            document.getElementById('completed-list').appendChild(task);
+        }
+
+        // Enable drag and drop for all lists
+        document.querySelectorAll('.task-list').forEach(list => {
+            list.addEventListener('dragover', (e) => {
+                e.preventDefault();
+            });
+
+            list.addEventListener('drop', () => {
+                if (draggedTask) {
+                    list.appendChild(draggedTask);
+                }
+            });
+        });
+
+        // Function to check for missed tasks
+        function checkMissedTasks() {
+            const currentDate = new Date().toISOString().split('T')[0];  // Get today's date
+
+            document.querySelectorAll('.task-list li').forEach(task => {
+                const dueDate = task.getAttribute('data-due-date');
+
+                if (dueDate < currentDate && !task.classList.contains('completed')) {
+                    task.classList.add('missed');
+                    document.getElementById('missed-list').appendChild(task);
+                }
+            });
+        }
+
+        // Run this function periodically to check missed tasks
+        setInterval(checkMissedTasks, 60000);  // Check every minute
+        document.addEventListener('DOMContentLoaded', function () {
+    const calendar = document.getElementById('calendar');
+    const monthDisplay = document.getElementById('current-month-year');
+    const prevMonthBtn = document.getElementById('prev-month');
+    const nextMonthBtn = document.getElementById('next-month');
+
+    let currentDate = new Date();
+
+    const months = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
+
+    // Event listener for month change
+    prevMonthBtn.addEventListener('click', function () {
+        currentDate.setMonth(currentDate.getMonth() - 1);
+        renderCalendar();
+    });
+
+    nextMonthBtn.addEventListener('click', function () {
+        currentDate.setMonth(currentDate.getMonth() + 1);
+        renderCalendar();
+    });
+
+    // Function to render the calendar
+    function renderCalendar() {
+        calendar.innerHTML = ''; // Clear previous calendar
+        const currentMonth = currentDate.getMonth();
+        const currentYear = currentDate.getFullYear();
+        const firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay();
+        const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+        // Display current month and year
+        monthDisplay.textContent = `${months[currentMonth]} ${currentYear}`;
+
+        // Weekday headers
+        const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+        daysOfWeek.forEach(day => {
+            const header = document.createElement('div');
+            header.classList.add('day-header');
+            header.textContent = day;
+            calendar.appendChild(header);
+        });
+
+        // Fill in empty cells before the first day
+        const startDayIndex = (firstDayOfMonth + 6) % 7; // Shift Sunday to the end of the week
+        for (let i = 0; i < startDayIndex; i++) {
+            const emptyCell = document.createElement('div');
+            emptyCell.classList.add('day');
+            calendar.appendChild(emptyCell);
+        }
+
+        // Generate days for the current month
+        for (let day = 1; day <= daysInMonth; day++) {
+            const dayCell = document.createElement('div');
+            dayCell.classList.add('day');
+            dayCell.textContent = day;
+
+            // Event listener for adding a project
+            dayCell.addEventListener('click', function () {
+                const projectName = prompt("Enter project name:");
+                if (projectName) {
+                    const eventElement = document.createElement('div');
+                    eventElement.classList.add('event', 'event-project');
+                    eventElement.textContent = projectName;
+                    dayCell.appendChild(eventElement);
+                }
+            });
+
+            calendar.appendChild(dayCell);
+        }
+    }
+
+    // Initialize the calendar on page load
+    renderCalendar();
+});
+document.querySelectorAll('.add-btn').forEach(button => {
+    button.addEventListener('click', function () {
+        const column = this.getAttribute('data-column');
+        let newRow = document.createElement('tr');
+        
+        // Prompt user for input based on column
+        if (column === 'name') {
+            const newValue = prompt(`Enter new project name`);
+            if (newValue) {
+                newRow.innerHTML = `
+                    <td>${newValue}</td>
+                    <td></td>
+                    <td>
+                        <select>
+                            <option>Completed</option>
+                            <option>Pending</option>
+                            <option>On Hold</option>
+                            <option>In Progress</option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                `;
+            }
+        } else if (column === 'client') {
+            const newValue = prompt(`Enter client/company name`);
+            if (newValue) {
+                newRow.innerHTML = `
+                    <td></td>
+                    <td>${newValue}</td>
+                    <td>
+                        <select>
+                            <option>Completed</option>
+                            <option>Pending</option>
+                            <option>On Hold</option>
+                            <option>In Progress</option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                `;
+            }
+        } else if (column === 'status') {
+            // Status is a dropdown, no prompt needed.
+            newRow.innerHTML = `
+                <td></td>
+                <td></td>
+                <td>
+                    <select>
+                        <option>Completed</option>
+                        <option>Pending</option>
+                        <option>On Hold</option>
+                        <option>In Progress</option>
+                    </select>
+                </td>
+                <td></td>
+                <td></td>
+            `;
+        } else if (column === 'deadline') {
+            const newValue = prompt(`Enter deadline`);
+            if (newValue) {
+                newRow.innerHTML = `
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <select>
+                            <option>Completed</option>
+                            <option>Pending</option>
+                            <option>On Hold</option>
+                            <option>In Progress</option>
+                        </select>
+                    </td>
+                    <td>${newValue}</td>
+                    <td></td>
+                `;
+            }
+        } else if (column === 'budget') {
+            const newValue = prompt(`Enter budget`);
+            if (newValue) {
+                newRow.innerHTML = `
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <select>
+                            <option>Completed</option>
+                            <option>Pending</option>
+                            <option>On Hold</option>
+                            <option>In Progress</option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td>${newValue}</td>
+                `;
+            }
+        }
+
+        // Insert the new row above the "Add" button row
+        const tbody = document.querySelector('#projectTable tbody');
+        const lastRow = tbody.querySelector('tr:last-child');
+        tbody.insertBefore(newRow, lastRow);
+    });
+});
+const ctxIncome = document.getElementById('incomeChart').getContext('2d');
+const incomeChart = new Chart(ctxIncome, {
+    type: 'line',
+    data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [{
+            label: 'Income',
+            data: [4500, 4800, 5300, 6000, 6500, 6800, 7200],
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+const ctxPerformance = document.getElementById('performanceChart').getContext('2d');
+const performanceChart = new Chart(ctxPerformance, {
+    type: 'bar',
+    data: {
+        labels: ['Team1', 'Team2', 'Team3', 'Team4'],
+        datasets: [{
+            label: 'Performance',
+            data: [98, 85, 90, 87],
+            backgroundColor: 'rgba(153, 102, 255, 0.2)',
+            borderColor: 'rgba(153, 102, 255, 1)',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+const xValues = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
+const yValues = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
+
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{
+      label: "Project Graph", // Custom label for the dataset
+      backgroundColor: "rgba(0,0,255,0.2)", // Fills the area under the line
+      borderColor: "rgba(0,0,255,1)", // Color of the line itself
+      fill: true, // Enables filling the area under the line
+      data: yValues
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true // Ensure the y-axis starts at zero
+      }
+    }
+  }
+});
+const links = document.querySelectorAll('.sidebar__link');
+    const sections = document.querySelectorAll('section');
+
+    links.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            // Remove active class from all links
+            links.forEach(link => link.classList.remove('active-link'));
+
+            // Hide all sections
+            sections.forEach(section => section.style.display = 'none');
+
+            // Add active class to clicked link
+            link.classList.add('active-link');
+
+            // Show the corresponding section
+            const targetId = link.getAttribute('href').substring(1); // Get the id from href
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.style.display = 'block';
+            }
+        });
+    });
+    
+    function redirectToLogin(event) {
+        // Prevent any default behavior (if any JavaScript prevents the link action)
+        event.preventDefault();
+        // Force redirection to login.html
+        window.location.href = 'login.html';
+    }
+
+    </script>
+    
+    <script src="main.js"></script>
+</body>
+
+</html>
